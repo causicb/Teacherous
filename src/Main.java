@@ -15,6 +15,12 @@ public class Main {
 
         System.out.println(cir.perimeter());
 
+        if(rec instanceof Object){
+            System.out.println("object");
+        }
+
+        System.out.println();
+
         List<GeometricShape> shape = new ArrayList<>();
         shape.add(cir);
         shape.add(rec);

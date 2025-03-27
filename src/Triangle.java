@@ -53,7 +53,7 @@ public class Triangle extends GeometricShape {
     }
 
     public String toString() {
-        return "\nTriangle that has name \"" + this.name + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
+        return "Triangle that has name \"" + this.name + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
     }
 
 }
