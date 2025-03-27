@@ -24,16 +24,16 @@ public class Circle extends GeometricShape {
         this.r = r;
     }
 
-    public double area(){
-        return Math.PI*(r*r);
+    public double area() {
+        return Math.PI * (r * r);
     }
 
-    public double perimeterCircle(){
-        return 2*Math.PI*this.r;
+    public double perimeter() {
+        return 2 * Math.PI * this.r;
     }
 
-    public String toString(){
-        return "Circle that has name --" + this.name + "-- has area of: " + area();
+    public String toString() {
+        return "Circle that has name \"" + this.name + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
     }
 
 }

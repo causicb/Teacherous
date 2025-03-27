@@ -13,7 +13,7 @@ public class Main {
         System.out.println(rec.area());
         System.out.println(tri.area());
 
-        System.out.println(cir.perimeterCircle());
+        System.out.println(cir.perimeter());
 
         List<GeometricShape> shape = new ArrayList<>();
         shape.add(cir);
@@ -22,9 +22,10 @@ public class Main {
 
         shape.sort(Comparator.comparingDouble(GeometricShape::area));
 
-        for (GeometricShape gs : shape){
+        for (GeometricShape gs : shape) {
             System.out.println(gs);
         }
+
     }
 
 }

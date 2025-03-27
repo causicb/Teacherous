@@ -1,4 +1,4 @@
-public class Rectangle extends GeometricShape{
+public class Rectangle extends GeometricShape {
 
     private String name;
     private double sideA;
@@ -38,12 +38,12 @@ public class Rectangle extends GeometricShape{
         return this.sideA * this.sideB;
     }
 
-    public double perimeterRectangle() {
+    public double perimeter() {
         return 2 * (this.sideA + this.sideB);
     }
 
-    public String toString(){
-        return "Rectangle that has name --" + this.name + "-- has area of: " + area();
+    public String toString() {
+        return "Rectangle that has name \"" + this.name + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
     }
 
 }

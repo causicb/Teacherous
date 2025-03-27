@@ -1,4 +1,4 @@
-public class Triangle extends GeometricShape{
+public class Triangle extends GeometricShape {
 
     private String name;
     private double sideA;
@@ -44,16 +44,16 @@ public class Triangle extends GeometricShape{
         this.sideC = sideC;
     }
 
-    public double areaTriangle() {
-        return sideA + sideB + sideC;
-    }
-
     public double area() {
         return (this.sideA + this.sideB + this.sideC) / 2;
     }
 
-    public String toString(){
-        return "Triangle that has name --" + this.name + "-- has area of: " + area();
+    public double perimeter() {
+        return sideA + sideB + sideC;
+    }
+
+    public String toString() {
+        return "\nTriangle that has name \"" + this.name + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
     }
 
 }
