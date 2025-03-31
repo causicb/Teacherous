@@ -1,21 +1,12 @@
 public class Rectangle extends GeometricShape {
 
-    private String name;
     private double sideA;
     private double sideB;
 
     public Rectangle(String name, double sideA, double sideB) {
-        this.name = name;
+        super(name);
         this.sideA = sideA;
         this.sideB = sideB;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public double getSideA() {
@@ -43,7 +34,7 @@ public class Rectangle extends GeometricShape {
     }
 
     public String toString() {
-        return "Rectangle that has name \"" + this.name + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
+        return "Rectangle that has name \"" + getName() + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
     }
 
 }

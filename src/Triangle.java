@@ -1,23 +1,14 @@
 public class Triangle extends GeometricShape {
 
-    private String name;
     private double sideA;
     private double sideB;
     private double sideC;
 
     public Triangle(String name, double sideA, double sideB, double sideC) {
-        this.name = name;
+        super(name);
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public double getSideA() {
@@ -53,7 +44,7 @@ public class Triangle extends GeometricShape {
     }
 
     public String toString() {
-        return "Triangle that has name \"" + this.name + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
+        return "Triangle that has name \"" + getName() + "\" \nhas area of: " + area() + "cm, \nand also has perimeter of: " + perimeter() + "cm \n";
     }
 
 }
