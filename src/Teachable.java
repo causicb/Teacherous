@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Teachable {
 
-    ArrayList<GeometricShape> shapes;
+    private ArrayList<GeometricShape> shapes;
 
     Teachable() {
         shapes = new ArrayList<>();

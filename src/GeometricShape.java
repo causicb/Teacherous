@@ -1,4 +1,4 @@
-public abstract class GeometricShape implements Comparable<GeometricShape>{
+public abstract class GeometricShape implements Comparable<GeometricShape> {
 
     private String name;
 
@@ -20,7 +20,8 @@ public abstract class GeometricShape implements Comparable<GeometricShape>{
     }
 
     @Override
-    public int compareTo(GeometricShape other){
-        return Double.valueOf(this.area()).compareTo(Double.valueOf(other.area()));
+    public int compareTo(GeometricShape other) {
+        return Double.compare(this.area(), other.area());
     }
+
 }

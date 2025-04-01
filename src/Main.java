@@ -31,7 +31,7 @@ public class Main {
 
         Collections.sort(teachable.getShapes());
 
-        for (GeometricShape gs : teachable.shapes) {
+        for (GeometricShape gs : teachable.getShapes()) {
             System.out.println(gs);
         }
 
