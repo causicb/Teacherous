@@ -1,4 +1,4 @@
-public abstract class GeometricShape {
+public abstract class GeometricShape implements Comparable<GeometricShape>{
 
     private String name;
 
@@ -7,7 +7,6 @@ public abstract class GeometricShape {
     public abstract double perimeter();
 
     GeometricShape(String name) {
-        super();
         this.name = name;
     }
 
@@ -20,4 +19,8 @@ public abstract class GeometricShape {
         return "Name : " + this.name + ", Area: " + area() + ", Perimeter: " + perimeter();
     }
 
+    @Override
+    public int compareTo(GeometricShape other){
+        return Double.valueOf(this.area()).compareTo(Double.valueOf(other.area()));
+    }
 }
