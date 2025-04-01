@@ -1,34 +1,37 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.Collections;
 
 public class Main {
 
     public static void main(String[] args) {
-        Circle cir = new Circle("cir", 5.5);
-        Rectangle rec = new Rectangle("rect", 3.4, 5.25);
-        Triangle tri = new Triangle("tri", 2, 3, 4);
+        Circle cir1 = new Circle("c1", 10);
+        Circle cir2 = new Circle("c2", 5);
 
-        System.out.println(cir.area());
-        System.out.println(rec.area());
-        System.out.println(tri.area());
+        Rectangle rec1 = new Rectangle("r1", 10, 5);
+        Rectangle rec2 = new Rectangle("r2", 3, 3);
 
-        System.out.println(cir.perimeter());
+        Triangle tri1 = new Triangle("tri", 2, 3, 4);
+        Triangle tri2 = new Triangle("tri", 5, 6, 7);
 
-        if(rec instanceof Object){
+        /*
+        if(rec1 instanceof Object){
             System.out.println("object");
         }
+        */
 
-        System.out.println();
+        Teachable teachable = new Teachable();
 
-        List<GeometricShape> shape = new ArrayList<>();
-        shape.add(cir);
-        shape.add(rec);
-        shape.add(tri);
+        teachable.getShapes().add(cir1);
+        teachable.getShapes().add(cir2);
 
-        shape.sort(Comparator.comparingDouble(GeometricShape::area));
+        teachable.getShapes().add(rec1);
+        teachable.getShapes().add(rec2);
 
-        for (GeometricShape gs : shape) {
+        teachable.getShapes().add(tri1);
+        teachable.getShapes().add(tri2);
+
+        Collections.sort(teachable.getShapes());
+
+        for (GeometricShape gs : teachable.shapes) {
             System.out.println(gs);
         }
 
